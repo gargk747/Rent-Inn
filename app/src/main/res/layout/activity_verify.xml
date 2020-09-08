@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Verification:-"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="125dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have sent an Email to the email provided by you for verification. \nDo verify it for creating account"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:padding="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number Verification:-"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="250dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true"
+        android:text="+91-9999999999"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP for verification"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textAlignment="center"
+        android:layout_marginTop="330dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.chaos.view.PinView
+        android:id="@+id/verify_phoneOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemCount="6"
+        android:layout_marginTop="370dp"
+        android:layout_centerHorizontal="true"
+        app:itemWidth="50dp"
+        app:itemHeight="50dp"
+        app:lineColor="@color/black"
+        style="@style/PinWidget.PinView"
+        android:inputType="number"
+        android:cursorVisible="true"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="true"
+        android:elevation="10dp"
+        app:itemRadius="5dp" />
+    <TextView
+        android:id="@+id/verify_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/verify_phoneOTP"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_button"
+        android:text="VERIFY"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:elevation="20dp"
+        android:textColor="@color/white"
+        android:onClick="verifyClick"
+        />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:src="@drawable/background"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RENT-INN"
+                        android:layout_margin="30dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"/>
+                    <EditText
+                        android:id="@+id/register_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:padding="15dp"
+                        android:drawableEnd="@drawable/ic_username"
+                        android:layout_marginTop="250dp"
+                        android:hint="Full Name"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/login_textfield"
+                        />
+                    <EditText
+                        android:id="@+id/register_emailorPhoneNumber"
+                        android:layout_below="@id/register_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:padding="15dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableEnd="@drawable/ic_email"
+                        android:hint="Email Address/Phone Number"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/login_textfield"
+                        />
+                    <EditText
+                        android:id="@+id/register_password"
+                        android:layout_below="@id/register_emailorPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:drawableEnd="@drawable/ic_password"
+                        android:padding="15dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Create Password"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/login_textfield"
+                        />
+                    <EditText
+                        android:id="@+id/register_connfirmpass"
+                        android:layout_below="@id/register_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:padding="15dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableEnd="@drawable/ic_password"
+                        android:hint="Confirm Password"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/login_textfield"
+                        />
+                    <TextView
+                        android:layout_below="@id/register_connfirmpass"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:text="REGISTER"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:id="@+id/register_checkBox"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/register_connfirmpass"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginStart="9dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/register_connfirmpass"
+                        android:layout_marginTop="53dp"
+                        android:layout_marginStart="40dp"
+                        android:text="I agree to all the terms and conditions"
+                        />
+                    <TextView
+                        android:id="@+id/register_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/register_connfirmpass"
+                        android:layout_marginTop="72dp"
+                        android:layout_marginStart="40dp"
+                        android:text="Terms &amp; Conditions"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/register_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/login_button"
+                        android:foreground="@drawable/ic_baseline_arrow_forward"
+                        android:foregroundGravity="center"
+                        android:layout_below="@id/register_connfirmpass"
+                        android:layout_alignParentEnd="true"
+                        android:elevation="10dp"
+                        android:onClick="registerClick"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginTop="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/register_button"
+                        android:text="Or Sign Up using"
+                        android:textSize="18dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="75dp"
+                        android:textColor="@color/black"
+                        />
+                    <ImageButton
+                        android:id="@+id/Register_fb"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:background="@drawable/login_button"
+                        android:layout_below="@id/register_button"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="70dp"
+                        android:foreground="@drawable/fb"
+                        android:layout_marginStart="25dp"
+                        />
+                    <ImageButton
+                        android:id="@+id/Register_google"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:background="@drawable/login_button"
+                        android:layout_below="@id/register_button"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="70dp"
+                        android:foreground="@drawable/google"
+                        android:layout_marginStart="100dp"
+                        />
+                    <TextView
+                        android:id="@+id/Register_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/register_button"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:onClick="signInclick"
+                        android:text="I am back, Sign in!"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+</RelativeLayout>
