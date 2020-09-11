@@ -11,89 +11,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            tools:ignore="MissingConstraints">
-
+            >
             <ImageView
+                android:id="@+id/cover"
                 android:layout_width="wrap_content"
-                android:layout_height="500dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="25dp"
                 android:src="@drawable/background"/>
 
             <TextView
+                android:id="@+id/getStarted_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="20dp"
+                android:layout_below="@id/cover"
                 android:text="RENT-INN"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:textColor="#000000"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="20dp"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_margin="20dp"
+                />
 
 
             <TextView
+                android:id="@+id/getStarted_continue"
+                android:layout_below="@id/getStarted_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="110dp"
                 android:text="CONTINUE WITH"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="#000000"
-                app:layout_constraintBottom_toTopOf="@id/getStarted_fb"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textColor="#000000" />
 
-            <ImageButton
-                android:id="@+id/getStarted_fb"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/login_button"
-                android:elevation="10dp"
-                android:foreground="@drawable/fb"
-                android:layout_marginTop="580dp"
-                app:layout_constraintEnd_toStartOf="@+id/getStarted_google"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/getStarted_continue"
+                android:layout_marginTop="25dp">
 
-            <ImageButton
-                android:id="@+id/getStarted_google"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/login_button"
-                android:elevation="10dp"
-                android:foreground="@drawable/google"
-                android:layout_marginTop="580dp"
-                app:layout_constraintEnd_toStartOf="@+id/getStarted_email"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/getStarted_fb"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/getStarted_fb"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/login_button"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:foreground="@drawable/fb1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/getStarted_google"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
-                android:id="@+id/getStarted_email"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:background="@drawable/login_button"
-                android:elevation="10dp"
-                android:gravity="center"
-                android:onClick="email"
-                android:text="EMAIL"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:layout_marginTop="580dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/getStarted_google"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/getStarted_google"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/login_button"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:foreground="@drawable/google1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/getStarted_email"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/getStarted_fb"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/getStarted_email"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/login_button"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:onClick="email"
+                    android:text="EMAIL"
+                    android:layout_marginBottom="20dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/getStarted_google"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
 
     </ScrollView>
 
