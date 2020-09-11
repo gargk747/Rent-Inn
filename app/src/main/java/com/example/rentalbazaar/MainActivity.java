@@ -29,11 +29,12 @@ public class MainActivity extends AppCompatActivity {
         BottomNav.add(new MeowBottomNavigation.Model(5,R.drawable.ic_profile));
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
+        BottomNav.setCount(1,"100");
 
         BottomNav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext(),"Clicked item"+item.getId(),Toast.LENGTH_SHORT).show();
+
             }
         });
         BottomNav.setOnShowListener(new MeowBottomNavigation.ShowListener() {
