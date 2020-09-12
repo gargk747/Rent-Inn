@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".NewPassword"></activity>
+        <activity android:name=".NewPassword" />
         <activity android:name=".PasswordChangeOTP" />
         <activity android:name=".VerifyActivity" />
         <activity android:name=".RegisterActivity" />

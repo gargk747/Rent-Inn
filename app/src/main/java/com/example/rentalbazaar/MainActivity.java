@@ -1,10 +1,16 @@
 package com.example.rentalbazaar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.PointerIcon;
+import android.view.View;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -12,6 +18,7 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 public class MainActivity extends AppCompatActivity {
 
     MeowBottomNavigation BottomNav;
+    Toolbar toolbar;
     private final static int ID_home=1;
     private final static int ID_explore=2;
     private final static int ID_add=3;
@@ -28,15 +35,36 @@ public class MainActivity extends AppCompatActivity {
         BottomNav.add(new MeowBottomNavigation.Model(4,R.drawable.ic_saved));
         BottomNav.add(new MeowBottomNavigation.Model(5,R.drawable.ic_profile));
 
+        toolbar=findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
         BottomNav.setCount(1,"100");
+
 
         BottomNav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-
+                switch (item.getId()){
+                    case ID_home:
+                        toolbar.setTitle("Home");
+                        break;
+                    case ID_explore:
+                        toolbar.setTitle("Explore");
+                        break;
+                    case ID_add:
+                        toolbar.setTitle("Add");
+                        break;
+                    case ID_saved:
+                        toolbar.setTitle("Saved");
+                        break;
+                    case ID_profile:
+                        toolbar.setTitle("Profile");
+                        break;
+                }
             }
         });
+
         BottomNav.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
@@ -61,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,selected_fragmment).commit();
             }
         });
+
         BottomNav.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
