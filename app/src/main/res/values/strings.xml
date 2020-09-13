@@ -8,4 +8,29 @@
         <item>Geared</item>
         <item>Non-Geared</item>
     </string-array>
+    <string-array name="BookSpinner">
+        <item>All</item>
+        <item>Science</item>
+        <item>Fiction</item>
+    </string-array>
+    <string-array name="CameraSpinner">
+        <item>All</item>
+        <item>Lens 50mm</item>
+        <item>Lens 200mm</item>
+    </string-array>
+    <string-array name="DressSpinner">
+        <item>All</item>
+        <item>Girls</item>
+        <item>Boys</item>
+    </string-array>
+    <string-array name="GamesSpinner">
+        <item>All</item>
+        <item>PS4</item>
+        <item>Xbox</item>
+    </string-array>
+    <string-array name="HouseSpinner">
+        <item>All</item>
+        <item>1 BHK</item>
+        <item>2 BHK</item>
+    </string-array>
 </resources>
