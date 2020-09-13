@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
-        BottomNav.setCount(1,"100");
+        BottomNav.setCount(1,"10");
 
 
         BottomNav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {

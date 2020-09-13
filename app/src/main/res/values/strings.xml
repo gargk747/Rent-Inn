@@ -2,4 +2,10 @@
     <string name="app_name">Rental Bazaar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="ByCycleSpinner">
+        <item>All</item>
+        <item>Geared</item>
+        <item>Non-Geared</item>
+    </string-array>
 </resources>
