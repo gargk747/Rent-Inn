@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +8,15 @@
     android:background="@color/white"
     tools:context=".GetStarted">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="match_parent">
+
             <ImageView
                 android:id="@+id/cover"
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_marginTop="25dp"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:src="@drawable/background"/>
 
             <TextView
@@ -28,41 +25,42 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cover"
                 android:text="RENT-INN"
-                android:textSize="40dp"
+                android:textSize="@dimen/_40sdp"
                 android:textStyle="bold"
                 android:layout_centerHorizontal="true"
                 android:textColor="#000000"
-                android:layout_margin="20dp"
+                android:layout_margin="@dimen/_10sdp"
                 />
 
 
             <TextView
                 android:id="@+id/getStarted_continue"
-                android:layout_below="@id/getStarted_text"
+                android:layout_above="@id/getStarted_Buttons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:text="CONTINUE WITH"
-                android:textSize="18dp"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 android:textColor="#000000" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/getStarted_continue"
-                android:layout_marginTop="25dp">
-
+                android:layout_alignParentBottom="true"
+                android:id="@+id/getStarted_Buttons">
                 <ImageButton
                     android:id="@+id/getStarted_fb"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:background="@drawable/login_button"
-                    android:elevation="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:foreground="@drawable/fb1"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:foreground="@drawable/fb"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/getStarted_google"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -71,12 +69,13 @@
 
                 <ImageButton
                     android:id="@+id/getStarted_google"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
                     android:background="@drawable/login_button"
-                    android:elevation="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:foreground="@drawable/google1"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:foreground="@drawable/google"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/getStarted_email"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -85,17 +84,18 @@
 
                 <TextView
                     android:id="@+id/getStarted_email"
-                    android:layout_width="150dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_40sdp"
                     android:background="@drawable/login_button"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/_10sdp"
                     android:gravity="center"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:onClick="email"
                     android:text="EMAIL"
-                    android:layout_marginBottom="20dp"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
+                    android:textSize="@dimen/_15sdp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -105,9 +105,4 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </RelativeLayout>
-
-    </ScrollView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

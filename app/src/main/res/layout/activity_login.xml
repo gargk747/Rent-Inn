@@ -4,30 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".LoginActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/login_cover"
                 android:layout_width="wrap_content"
-                android:layout_height="230dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:src="@drawable/background"/>
             <TextView
                 android:id="@+id/login_text"
                 android:textStyle="bold"
                 android:text="RENT-INN"
-                android:textSize="30dp"
+                android:textSize="@dimen/_20sdp"
                 android:layout_below="@id/login_cover"
                 android:textColor="@color/black"
-                android:layout_marginTop="0dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -36,56 +28,56 @@
                 android:id="@+id/login_phoneNoEmail"
                 android:layout_width="match_parent"
                 android:layout_below="@id/login_text"
-                android:layout_height="50dp"
-                android:padding="18dp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_11sdp"
                 android:textColor="#000000"
-                android:textSize="15dp"
+                android:textSize="@dimen/_12sdp"
                 android:hint="Phone Number/Email Address"
                 android:textAlignment="textStart"
                 android:drawableEnd="@drawable/ic_username"
-                android:layout_marginEnd="40dp"
-                android:layout_marginTop="20dp"
-                android:elevation="10dp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:elevation="@dimen/_8sdp"
                 android:background="@drawable/login_textfield"/>
 
             <EditText
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_below="@id/login_phoneNoEmail"
-                android:layout_marginTop="15dp"
-                android:layout_height="50dp"
-                android:padding="18dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_11sdp"
                 android:textColor="#000000"
-                android:textSize="15dp"
+                android:textSize="@dimen/_12sdp"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textAlignment="textStart"
                 android:drawableEnd="@drawable/ic_password"
-                android:layout_marginEnd="40dp"
-                android:elevation="10dp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:elevation="@dimen/_8sdp"
                 android:background="@drawable/login_textfield"/>
 
             <TextView
                 android:layout_below="@id/login_password"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_12sdp"
                 android:text="SIGN IN"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="@dimen/_17sdp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/login_forgotpassword"
                 android:layout_below="@id/login_password"
-                android:layout_marginTop="60dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_12sdp"
                 android:text="Forgot password?"
                 android:onClick="forgotpasswordclick"
                 android:clickable="true"
                 android:focusableInTouchMode="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,14 +85,14 @@
 
             <ImageButton
                 android:id="@+id/login_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:elevation="10dp"
                 android:background="@drawable/login_button"
                 android:layout_below="@id/login_password"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:foregroundGravity="center"
                 android:onClick="loginClick"
                 android:foreground="@drawable/ic_baseline_arrow_forward"
@@ -109,58 +101,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/login_button"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="30dp"
+                android:layout_above="@id/login_fb"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_14sdp"
                 android:text="or Login with"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="@dimen/_14sdp"
                 />
             <ImageButton
                 android:id="@+id/login_fb"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:elevation="10dp"
+                android:layout_alignParentBottom="true"
                 android:background="@drawable/login_button"
-                android:layout_below="@id/login_button"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="20dp"
-                android:foreground="@drawable/fb1"
-                android:layout_marginStart="30dp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:foreground="@drawable/fb"
+                android:layout_marginStart="@dimen/_15sdp"
                 />
             <ImageButton
                 android:id="@+id/login_google"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:elevation="10dp"
                 android:background="@drawable/login_button"
-                android:layout_below="@id/login_button"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="20dp"
-                android:foreground="@drawable/google1"
-                android:layout_marginStart="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:foreground="@drawable/google"
+                android:layout_marginStart="@dimen/_65sdp"
                 />
             <TextView
                 android:id="@+id/login_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/login_button"
-                android:layout_marginTop="78dp"
-                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="@dimen/_20sdp"
                 android:onClick="newUserClick"
                 android:text="I am new, Register me!"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold"
                 />
-
-        </RelativeLayout>
-
-
-    </ScrollView>
-
-
 
 </RelativeLayout>
