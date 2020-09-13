@@ -1,8 +1,11 @@
 package com.example.rentalbazaar;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -14,10 +17,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     MeowBottomNavigation BottomNav;
+    DrawerLayout drawerLayout;
     Toolbar toolbar;
     private final static int ID_home=1;
     private final static int ID_explore=2;
@@ -37,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar=findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
+
+        drawerLayout=findViewById(R.id.drawerLayout);
+        ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
         BottomNav.setCount(1,"10");
@@ -115,5 +125,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else{
+        super.onBackPressed();
+        }
     }
 }
