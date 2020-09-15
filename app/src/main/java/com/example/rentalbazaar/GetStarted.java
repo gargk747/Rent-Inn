@@ -18,4 +18,9 @@ public class GetStarted extends AppCompatActivity {
         Intent intent= new Intent(GetStarted.this,LoginActivity.class);
         startActivity(intent);
     }
+
+    public void Later(View view) {
+        Intent intent= new Intent(GetStarted.this,MainActivity.class);
+        startActivity(intent);
+    }
 }
