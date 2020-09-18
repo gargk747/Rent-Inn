@@ -17,6 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.rentalbazaar.BiCycle.BiCycleFragment;
+import com.example.rentalbazaar.Book.BookFragment;
+import com.example.rentalbazaar.Camera.CameraFragment;
+import com.example.rentalbazaar.Dress.DressFragment;
+import com.example.rentalbazaar.Properties.PropertiesFragment;
+import com.example.rentalbazaar.Sports.SportsFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -27,12 +33,12 @@ public class HomeFragment extends Fragment {
     private ViewPager home_viewPager;
     private TabLayout home_tabLayout;
 
-    private ByCycleFragment byCycleFragment;
+    private BiCycleFragment biCycleFragment;
     private BookFragment bookFragment;
     private CameraFragment cameraFragment;
     private DressFragment dressFragment;
-    private GameDVDFragment gameDVDFragment;
-    private HouseFragment houseFragment;
+    private SportsFragment sportsFragment;
+    private PropertiesFragment propertiesFragment;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,22 +54,22 @@ public class HomeFragment extends Fragment {
 
         home_viewPager =(ViewPager)v.findViewById(R.id.Home_viewPager);
         home_tabLayout =(TabLayout)v.findViewById(R.id.Home_tabLayout);
-        byCycleFragment=new ByCycleFragment();
+        biCycleFragment =new BiCycleFragment();
         bookFragment= new BookFragment();
         cameraFragment= new CameraFragment();
         dressFragment= new DressFragment();
-        gameDVDFragment= new GameDVDFragment();
-        houseFragment= new HouseFragment();
+        sportsFragment = new SportsFragment();
+        propertiesFragment = new PropertiesFragment();
 
         home_tabLayout.setupWithViewPager(home_viewPager);
 
         ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getChildFragmentManager(),0);
-        viewPagerAdapter.addFragment(byCycleFragment,"By-Cycle");
+        viewPagerAdapter.addFragment(biCycleFragment,"By-Cycle");
         viewPagerAdapter.addFragment(bookFragment,"Book");
         viewPagerAdapter.addFragment(cameraFragment,"Camera");
         viewPagerAdapter.addFragment(dressFragment,"Dress");
-        viewPagerAdapter.addFragment(gameDVDFragment,"Game-DVD");
-        viewPagerAdapter.addFragment(houseFragment,"House");
+        viewPagerAdapter.addFragment(sportsFragment,"Sports");
+        viewPagerAdapter.addFragment(propertiesFragment,"Properties");
         home_viewPager.setAdapter(viewPagerAdapter);
         return v;
     }

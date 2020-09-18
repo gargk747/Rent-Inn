@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
-        BottomNav.setCount(1,"10");
-
+        //BottomNav.setCount(1,"10");
 
         BottomNav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
@@ -125,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        BottomNav.show(1,false);
     }
 
     @Override

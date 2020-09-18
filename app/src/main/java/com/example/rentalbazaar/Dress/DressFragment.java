@@ -1,4 +1,4 @@
-package com.example.rentalbazaar;
+package com.example.rentalbazaar.Dress;
 
 import android.os.Bundle;
 
@@ -12,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class HouseFragment extends Fragment {
+import com.example.rentalbazaar.R;
+
+public class DressFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,10 @@ public class HouseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v= inflater.inflate(R.layout.fragment_house, container, false);
+        View v= inflater.inflate(R.layout.fragment_dress, container, false);
 
-        Spinner spinner=v.findViewById(R.id.house_spinner);
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.HouseSpinner,android.R.layout.simple_spinner_item);
+        Spinner spinner=v.findViewById(R.id.dress_spinner);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.DressSpinner,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

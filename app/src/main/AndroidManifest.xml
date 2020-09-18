@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".BiCycle.BiCycle_clickedPreview"/>
         <activity android:name=".NewPassword" />
         <activity android:name=".PasswordChangeOTP" />
         <activity android:name=".VerifyActivity" />
@@ -23,6 +24,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-    </application>
 
+    </application>
 </manifest>

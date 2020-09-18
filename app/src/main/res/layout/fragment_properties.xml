@@ -4,22 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ByCycleFragment">
+    tools:context=".Properties.PropertiesFragment">
 
     <Spinner
-        android:id="@+id/bycycle_spinner"
+        android:id="@+id/properties_spinner"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="10dp"
         android:elevation="2dp"
         android:background="@drawable/spinner_background"
         />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/bycycle_spinner"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:id="@+id/bycycle_recyclerView"/>
 
 </RelativeLayout>

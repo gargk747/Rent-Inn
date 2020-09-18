@@ -1,4 +1,4 @@
-package com.example.rentalbazaar;
+package com.example.rentalbazaar.Camera;
 
 import android.os.Bundle;
 
@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.rentalbazaar.R;
 
 public class CameraFragment extends Fragment {
 

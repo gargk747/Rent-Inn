@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameDVDFragment">
+    tools:context=".Sports.SportsFragment">
 
     <Spinner
-        android:id="@+id/games_spinner"
+        android:id="@+id/sports_spinner"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="10dp"

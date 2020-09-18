@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/biCycleCard_card"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_8sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bicycle_carview_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/biCycleCard_name"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="HERO"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="#FD7613"
+                    android:textSize="@dimen/_20sdp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/biCycleCard_type"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:text="Geared"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="#A15924"
+                    android:textSize="@dimen/_13sdp"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorite"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"/>
+
+                <TextView
+                    android:id="@+id/bicycleCard_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:text="₹2000"
+                    android:textColor="#FD7613"
+                    android:textSize="@dimen/_18sdp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:id="@+id/biCycleCard_image"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/cycledemo"
+        android:background="@drawable/bicycle_cardview_imagebackground"
+        android:elevation="@dimen/_5sdp"/>
+
+</RelativeLayout>

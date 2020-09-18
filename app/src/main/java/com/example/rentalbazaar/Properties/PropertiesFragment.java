@@ -1,4 +1,4 @@
-package com.example.rentalbazaar;
+package com.example.rentalbazaar.Properties;
 
 import android.os.Bundle;
 
@@ -12,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class BookFragment extends Fragment {
+import com.example.rentalbazaar.R;
+
+public class PropertiesFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,10 @@ public class BookFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.fragment_book, container, false);
+        View v= inflater.inflate(R.layout.fragment_properties, container, false);
 
-        Spinner spinner=v.findViewById(R.id.book_spinner);
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.BookSpinner,android.R.layout.simple_spinner_item);
+        Spinner spinner=v.findViewById(R.id.properties_spinner);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.PropertiesSpinner,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -5,34 +5,45 @@
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
 
-    <string-array name="ByCycleSpinner">
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="hello_world">Hello Square World!</string>
+    <string-array name="BiCycleSpinner">
         <item>All</item>
         <item>Geared</item>
         <item>Non-Geared</item>
+        <item>Accessories</item>
     </string-array>
     <string-array name="BookSpinner">
         <item>All</item>
-        <item>Science</item>
-        <item>Fiction</item>
+        <item>Competitive</item>
+        <item>Magazines/Novels</item>
+        <item>Standard</item>
     </string-array>
     <string-array name="CameraSpinner">
         <item>All</item>
-        <item>Lens 50mm</item>
-        <item>Lens 200mm</item>
+        <item>DSLR Cameras</item>
+        <item>Mirrorless Cameras</item>
+        <item>Accessories</item>
     </string-array>
     <string-array name="DressSpinner">
         <item>All</item>
         <item>Girls</item>
         <item>Boys</item>
     </string-array>
-    <string-array name="GamesSpinner">
+    <string-array name="SportsSpinner">
         <item>All</item>
-        <item>PS4</item>
-        <item>Xbox</item>
+        <item>Indoor</item>
+        <item>Outdoor</item>
     </string-array>
-    <string-array name="HouseSpinner">
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string-array name="PropertiesSpinner">
         <item>All</item>
-        <item>1 BHK</item>
-        <item>2 BHK</item>
+        <item>Home/Apartments</item>
+        <item>Shop/Offices</item>
+        <item>Land/Plots</item>
+        <item>PG</item>
     </string-array>
 </resources>
